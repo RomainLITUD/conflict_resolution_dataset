@@ -42,7 +42,7 @@ print('Number of scenarios: ', len(log_ids))
 slices: len = nb_objects + 1, slices[n] and slices[n+1] gives the start/end indices of the n-th object
 maps: lanes as NumPy array
 type: len = nb_objects, contains 7 numbers with the following meanings:
-        -1: static background
+        -1: Static background
         0: human-driven vehicles
         1: pedestrians
         2: motorcyclists
@@ -60,10 +60,10 @@ slices, timestep, motion, type, maps = read_scenario(log_ids[2441], root)
 
 - Visualize the data
 ````python
-# visualize the 2441-st scenario
+# Visualize the 2441-st scenario
 # the parameter other_road_users = True/False controls whether to plot the surrounding agents (True by default)
-# the parameter direction = True/False controls whether to plot the start and end directions of the vehicles involved in the conflict (True by default)
-fig, ax = visualize(log_ids[2441], root, other_road_users, direction)
+# The parameter direction = True/False controls whether to plot the start and end directions of the vehicles involved in the conflict (True by default)
+fig, ax = visualize(log_ids[2441], root, other_road_users=True, direction=True)
 ````
 
 ## About metadata file
