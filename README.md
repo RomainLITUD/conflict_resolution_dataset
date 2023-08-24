@@ -10,6 +10,7 @@ Reading and visualizing the dataset requires the following packages"
 ```
 python >=3.8
 numpy
+scipy>=0.17.0
 zarr
 h5py
 matplotlib
@@ -59,8 +60,10 @@ slices, timestep, motion, type, maps = read_scenario(log_ids[7641], root)
 
 - Visualize the data
 ````python
-# visualize the 2441-st scenario, the last parameter True/False means whether to plot the surrounding agents (True by default)
-fig, ax = visualize(log_ids[2441], root, other_road_users)
+# visualize the 2441-st scenario
+# the parameter other_road_users = True/False controls whether to plot the surrounding agents (True by default)
+# the parameter direction = True/False controls whether to plot the start and end directions of the vehicles involved in the conflict (True by default)
+fig, ax = visualize(log_ids[2441], root, other_road_users, direction)
 ````
 
 ## About metadata file
