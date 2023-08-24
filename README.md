@@ -16,7 +16,7 @@ h5py
 matplotlib
 tqdm (optional)
 ```
-- Put the `math_utils.py` in the root dir.
+- Put the `visual_utils.py` in the root dir.
 - Unzip the downloaded `data.zip` file to the root dir.
 - The dataset is stored in a compact `zarr` form so even a 'potato' computer can handle this.
 
@@ -26,7 +26,7 @@ tqdm (optional)
 ````python
 import zarr
 import os
-from math_utils import *
+from visual_utils import *
 
 folder = 'av' # or 'hv'
 
@@ -78,21 +78,18 @@ The metadata files is a table, shown as the example below, for AV-involved scena
 These tables provide the following information about each scenario:
 | column | dtype | information |
 |-------|-------|-------|
-| `log_id` | object
-| `[xi_start, yi_start]` | float64
-|  | float64
-| xj_start | float64
-| yj_start | float64
-| typei | float64
-| xi_end | float64
-| yi_end | float64
-| xj_end | float64
-| yj_end | float64
-| typej | float64
-| direction | object
-| PET | float64
-| avfirst | bool
-| angle_start    float64
-| angle_end      float64
-| start           object
-| end             object
+| `log_id` | str | index of the scenario |
+| `[xi_start, yi_start]` | float | direction vector of the first* agent recorded in the scenario at the start** time |
+| `[xj_start, yj_start]` | float | direction vector of the second agent recorded in the scenario at the start time |
+| `typei` | float | agent type of the first agent recorded in the scenario |
+| `[xi_end, yi_end]` | float | direction vector of the first* agent recorded in the scenario at the end*** time |
+| `[xj_end, yj_end]` | float | direction vector of the second agent recorded in the scenario at the end time |
+| `typej` | float | agent type of the second agent recorded in the scenario |
+| `direction` | str | whether the second-passing vehicle moved from the left ('L-R') or the right ('R-L') of the first-passing agent |
+| `PET` | float | post-encroachment-time |
+| `avfirst` | bool | whether the first-passing agent is an AV, applied for `metafile_av.csv` only |
+| `angle_start` | float | angle between the direction vectors of the two agents at the start time |
+| `angle_end` | float | angle between the direction vectors of the two agents at the end time |
+| `start` | str | whether the two agents ran parallel (P), crossed (C), or ran opposite (O) to each other before reaching the conflict point |
+| `end` | str | whether the two agents ran parallel (P), crossed (C), or ran opposite (O) to each other after reaching the conflict point |
+|*Note that the first agent does not necessarily pass the conflict point first.\\ ** We consider the start time as 5 seconds before the first-passing agent passed the conflict point, or the start of the record if the time before passing the conflict point is less than 5 seconds. \\ *** Similarly, the end time is 5 seconds after the second-passing vehicle passed the conflict point, or the end of the record if the time after passing the conflict point is less than 5 seconds. |
