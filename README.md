@@ -68,9 +68,31 @@ fig, ax = visualize(log_ids[2441], root, other_road_users, direction)
 
 ## About metadata file
 
-In the metadata file, we provide the following information about each scenario:
+The metadata files is a table, shown as the example below, for AV-involved scenarios (`metafile_av.csv`) and AV-free scenarios (`metafile_hv.csv`), respectively.
 
 | log_id | xi_start | yi_start | xj_start | yj_start | typei | xi_end | yi_end | xj_end | yj_end | typej | direction | PET | avfirst | angle_start | angle_end | start | end |
 |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |
 | 2441 | -0.028310 | 0.999599 | -0.278388 | -0.960469 | 10.0 | -0.001506 | 0.999999 | 0.998085 | 0.061850 | 0.0 | R-L | 3.7 | False | 162.213724 | 86.540315 | opposite | cross |
 | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
+
+These tables provide the following information about each scenario:
+| column | dtype | information |
+|-------|-------|-------|
+| `log_id` | object
+| `[xi_start, yi_start]` | float64
+|  | float64
+| xj_start | float64
+| yj_start | float64
+| typei | float64
+| xi_end | float64
+| yi_end | float64
+| xj_end | float64
+| yj_end | float64
+| typej | float64
+| direction | object
+| PET | float64
+| avfirst | bool
+| angle_start    float64
+| angle_end      float64
+| start           object
+| end             object
