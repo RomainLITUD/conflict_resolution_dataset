@@ -59,8 +59,8 @@ slices, timestep, motion, type, maps = read_scenario(log_ids[7641], root)
 
 - Visualize the data
 ````python
-# visualize the 2441-st scenario, the last parameter True/False means whether plot the surrounding agents
-fig, ax = visualize(log_ids[2441], root, other_road_users=False) # other_road_users is True by default
+# visualize the 2441-st scenario, the last parameter True/False means whether to plot the surrounding agents (True by default)
+fig, ax = visualize(log_ids[2441], root, other_road_users)
 ````
 
 ## About metadata file
