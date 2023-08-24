@@ -22,7 +22,7 @@ tqdm (optional)
 ## Read and visualize data
 
 - Import the necessary packages:
-```
+````python
 import zarr
 import os
 from math_utils import *
@@ -33,10 +33,10 @@ root ='./data/'+folder+'/'
 
 log_ids = [name for name in os.listdir(root) if os.path.isdir(os.path.join(root, name))]
 print('Number of scenarios: ', len(log_ids))
-```
+````
 
 - Read the data
-```
+````python
 '''
 slices: len = nb_objects + 1, slices[n] and slices[n+1] gives the start/end indices of the n-th object
 maps: lanes as NumPy array
@@ -55,13 +55,13 @@ motion: motion state, with 7 dimensions
         yaw is to the x-axis, between [-pi, pi]
 '''
 slices, timestep, motion, type, maps = read_scenario(log_ids[7641], root)
-```
+````
 
 - Visualize the data
-```
+````python
 # visualize the 2441-st scenario, the last parameter True/False means whether plot the surrounding agents
-fig, ax = visualize(log_ids[2441], root)
-```
+fig, ax = visualize(log_ids[2441], root, other_road_users=False) # other_road_users is True by default
+````
 
 ## About metadata file
 
