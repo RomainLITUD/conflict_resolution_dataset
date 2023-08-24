@@ -70,6 +70,6 @@ fig, ax = visualize(log_ids[2441], root, other_road_users, direction)
 
 In the metadata file, we provide the following information about each scenario:
 
-| case_id | A | C | D | F | Fa | Fd | S |regime_comb |
-|     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |
-|48 | 4.3 |15.7 | 0.2 |19.6 | 6.5 | 0.6 | 1.2 | FaCADFSFd |
+| log_id | xi_start | yi_start | xj_start | yj_start | typei | xi_end | yi_end | xj_end | yj_end | typej | direction | PET | avfirst | angle_start | angle_end | start | end |
+|     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |     :---:      |
+| 2441 | -0.028310 | 0.999599 | -0.278388 | -0.960469 | 10.0 | -0.001506 | 0.999999 | 0.998085 | 0.061850 | 0.0 | R-L | 3.7 | False | 162.213724 | 86.540315 | opposite | cross |
