@@ -94,8 +94,7 @@ These tables provide the following information about each scenario:
 | `angle_end` | float | angle between the direction vectors of the two agents at the end time |
 | `start` | str | whether the two agents ran parallel (P), crossed (C), or ran opposite (O) to each other before reaching the conflict point |
 | `end` | str | whether the two agents ran parallel (P), crossed (C), or ran opposite (O) to each other after reaching the conflict point |
-|<td colspan=2>Notes</td> <sup> * Note that the first agent does not necessarily pass the conflict point first. <br />** We consider the start time as 5 seconds before the first-passing agent passed the conflict point, or the start of the record if the time before passing the conflict point is less than 5 seconds. <br />*** Similarly, the end time is 5 seconds after the second-passing vehicle passed the conflict point, or the end of the record if the time after passing the conflict point is less than 5 seconds.</sup>
-
+|:Notes:||: * Note that the first agent does not necessarily pass the conflict point first. <br />** We consider the start time as 5 seconds before the first-passing agent passed the conflict point, or the start of the record if the time before passing the conflict point is less than 5 seconds. <br />*** Similarly, the end time is 5 seconds after the second-passing vehicle passed the conflict point, or the end of the record if the time after passing the conflict point is less than 5 seconds.:|
 One can use the following code to select data in different conditions:
 ````python
 # AV passing the conflict point first
