@@ -81,7 +81,7 @@ These tables provide the following information about each scenario:
 | column | dtype | information |
 |-------|-------|-------|
 | `log_id` | str | index of the scenario |
-| `[xi_start, yi_start]` | float | direction vector of the first[^1] agent recorded in the scenario at the start** time |
+| `[xi_start, yi_start]` | float | direction vector of the first* agent recorded in the scenario at the start** time |
 | `[xj_start, yj_start]` | float | direction vector of the second agent recorded in the scenario at the start time |
 | `typei` | str | agent type of the first agent recorded in the scenario, being one of {'AV','HV','Pedestrian','Motorcyclist','Cyclist','Bus'} |
 | `[xi_end, yi_end]` | float | direction vector of the first* agent recorded in the scenario at the end*** time |
@@ -94,7 +94,7 @@ These tables provide the following information about each scenario:
 | `angle_end` | float | angle between the direction vectors of the two agents at the end time |
 | `start` | str | whether the two agents ran parallel (P), crossed (C), or ran opposite (O) to each other before reaching the conflict point |
 | `end` | str | whether the two agents ran parallel (P), crossed (C), or ran opposite (O) to each other after reaching the conflict point |
-<td colspan=3>[^1]Note that the first agent does not necessarily pass the conflict point first. <br />** We consider the start time as 5 seconds before the first-passing agent passed the conflict point, or the start of the record if the time before passing the conflict point is less than 5 seconds. <br />*** Similarly, the end time is 5 seconds after the second-passing vehicle passed the conflict point, or the end of the record if the time after passing the conflict point is less than 5 seconds.
+:* Note that the first agent does not necessarily pass the conflict point first. <br />** We consider the start time as 5 seconds before the first-passing agent passed the conflict point, or the start of the record if the time before passing the conflict point is less than 5 seconds. <br />*** Similarly, the end time is 5 seconds after the second-passing vehicle passed the conflict point, or the end of the record if the time after passing the conflict point is less than 5 seconds.
 
 One can use the following code to select data in different conditions:
 ````python
