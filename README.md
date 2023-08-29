@@ -1,6 +1,6 @@
 # A Comparative Conflict Resolution Dataset Derived from Argoverse-2: Scenarios with vs. without Autonomous Vehicles
 
-Authors: Guopeng Li, Yiru Jiao, and Hans van Lint
+Authors: Guopeng Li, Yiru Jiao, Simeon C. Calvert, and Hans van Lint
 
 - This dataset is derived from the open Argoverse-2 motion forecasting data: [https://www.argoverse.org/av2.html#forecasting-link]
 - The dataset, 2 metadata files, and the code to read and visualize the data can be downloaded through the 4.TU data platform: (dataset under preview, will be released soon)
