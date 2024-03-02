@@ -32,7 +32,7 @@ from visual_utils import *
 
 folder = 'av' # or 'hv'
 
-root ='./data/'+folder+'/'
+root ='./data_3m/'+folder+'/'
 
 log_ids = [name for name in os.listdir(root) if os.path.isdir(os.path.join(root, name))]
 print('Number of scenarios: ', len(log_ids))
