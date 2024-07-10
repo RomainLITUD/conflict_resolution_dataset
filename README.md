@@ -5,6 +5,9 @@ Authors: Guopeng Li, Yiru Jiao, Simeon C. Calvert, and Hans van Lint
 - This dataset is derived from the open Argoverse-2 motion forecasting data: [https://www.argoverse.org/av2.html#forecasting-link]
 - The dataset, 2 metadata files, and the code to read and visualize the data can be downloaded through the 4.TU data platform: [https://data.4tu.nl/datasets/8d6ee0b0-8ed5-43f3-b1c9-7665cc163e87]
 
+### Notice
+The link above is the initial version. When the paper is published, we will immediately upload the final version with merging conflicts and more annotations.
+
 ![Conflict Regimes](https://github.com/RomainLITUD/conflict_resolution_dataset/blob/main/regimes.png)
 
 ## Quick to start
