@@ -108,3 +108,7 @@ case_av_first = metafile_av[(metafile_av['ifirst'])] # In cases involving AV, th
 # Pedestrian passing the conflict point second
 case_ped_first_av_free = metafile_hv[(~metafile_hv['ifirst'])&(metafile_hv['typej']=='Pedestrian')]
 ````
+
+## Licence
+
+Please use this dataset under the licence of **CC BY-NC-SA 4.0** as indicated in the dataset link (4.TU).
