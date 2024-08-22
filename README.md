@@ -1,9 +1,13 @@
-# A Comparative Conflict Resolution Dataset Derived from Argoverse-2: Scenarios with vs. without Autonomous Vehicles
+# Lateral conflict resolution data derived from Argoverse-2: Analysing safety and efficiency impacts of autonomous vehicles at intersections
 
 Authors: Guopeng Li, Yiru Jiao, Simeon C. Calvert, and Hans van Lint
 
 - This dataset is derived from the open Argoverse-2 motion forecasting data: [https://www.argoverse.org/av2.html#forecasting-link]
-- The dataset, 2 metadata files, and the code to read and visualize the data can be downloaded through the 4.TU data platform: [https://data.4tu.nl/datasets/8d6ee0b0-8ed5-43f3-b1c9-7665cc163e87]
+- The crossing conflict dataset, 2 metadata files, and the code to read and visualize the data can be downloaded through the 4.TU data platform: [https://data.4tu.nl/datasets/8d6ee0b0-8ed5-43f3-b1c9-7665cc163e87]. Note that the merging conflicts are not included in this online version. The complete dataset is still under preview of the platform and will be made public once the preview is finished.
+- If you want to use the complete lateral conflict data, please contact the authors for immediate share.
+
+## Licence
+Please use this dataset under the licence of **CC BY-NC-SA 4.0** as indicated in the dataset link (4.TU).
 
 ### Notice
 The link above is the initial version. When the paper is published, we will immediately upload the final version with merging conflicts and more annotations.
@@ -109,6 +113,3 @@ case_av_first = metafile_av[(metafile_av['ifirst'])] # In cases involving AV, th
 case_ped_first_av_free = metafile_hv[(~metafile_hv['ifirst'])&(metafile_hv['typej']=='Pedestrian')]
 ````
 
-## Licence
-
-Please use this dataset under the licence of **CC BY-NC-SA 4.0** as indicated in the dataset link (4.TU).
